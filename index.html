@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <link rel="shortcut icon" href="order.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <!--<img src="logo.png" alt="Calligraphy Bazar Logo" class="logo">--> <!-- Logo -->
+        <h2>Calligraphy Bazar</h2>
+    </header>
+
+    <div class="background-image">
+        <div class="container">
+            <h3 style="font-weight: normal;">Track Your Order - Calligraphy Bazar</h3>
+            <div class="input-group">
+                <input type="text" id="order-id" placeholder="Enter Order ID">
+                <button onclick="fetchOrderStatus()">Track Order</button>
+            </div>
+            <!-- Message Box Below Input -->
+            <div id="order-id-message" style="display: none; font-size: 14px; margin-top: 10px;"></div>            
+            <p id="message" class="message"></p> <!-- Message area -->
+
+            <div id="order-info" class="order-info hidden">
+                <div class="info-item">
+                    <a class="icon">📦</a>
+                    <p><strong>Order ID:</strong> <span id="order-id-display"></span></p>
+                </div>
+                <div class="info-item">
+                    <a class="icon">📄</a>
+                    <p><strong>Product Name:</strong> <span id="product-name"></span></p>
+                </div>
+                <div class="info-item">
+                    <a class="icon">📄</a>
+                    <p><strong>Customer Name:</strong> <span id="customer-name"></span></p>
+                </div>
+                <div class="info-item">
+                    <a class="icon">🔄</a>
+                    <p><strong>Status:</strong> <span id="status"></span></p>
+                </div>
+                <div class="info-item">
+                    <a class="icon">📅</a>
+                    <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+                </div>
+                <div class="info-item">
+                    <a class="icon">💳</a>
+                    <p><strong>Payment Gateway:</strong> <span id="payment-gateway"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with Social Media Icons -->
+        <footer class="footer">
+            <p>&copy; 2024 Calligraphy Bazar|All Rights Resorved</p>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="social-icon fb"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://youtube.com" target="_blank" class="social-icon yt"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon insta"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    background-color: #003161;
+    color: #FFF;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.background-image {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 80px; /* Adjusted for fixed header */
+}
+
+.container {
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 20%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#order-id-message {
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #006A67;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005754;
+}
+
+.message {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.success {
+    color: #006A67;
+    border: 1px solid #006A67;
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+}
+
+.order-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.info-item:hover {
+    transform: translateX(5px);
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgba(0, 49, 97);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.social-media a i {
+    font-size: 1.3em;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.social-media a i:hover {
+    color: #FFF;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-bottom: 30%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .input-group input[type="text"] {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 35px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 100%;
+        margin-bottom: 30%;
+    }
+
+    .input-group input[type="text"] {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+}
